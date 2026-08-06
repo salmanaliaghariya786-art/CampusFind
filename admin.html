@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="admin-page">
+
+<div class="container">
+
+<h1>👨‍💼 Admin Dashboard</h1>
+
+<p>Manage Claim Requests</p>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Item ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+{% for claim in claims %}
+
+<tr>
+
+<td>{{ claim[0] }}</td>
+<td>{{ claim[1] }}</td>
+<td>{{ claim[2] }}</td>
+<td>{{ claim[3] }}</td>
+<td>{{ claim[4] }}</td>
+
+<td>
+
+{% if claim[4]|lower == "pending" %}
+
+<a href="/approve/{{ claim[0] }}">
+    <button style="background:green;color:white;">Approve</button>
+</a>
+
+<a href="/reject/{{ claim[0] }}">
+    <button style="background:red;color:white;">Reject</button>
+</a>
+
+{% else %}
+
+{% if claim[4] == "Approved" %}
+
+<button disabled style="background:green;color:white;">
+Approved
+</button>
+
+{% else %}
+
+<button disabled style="background:red;color:white;">
+Rejected
+</button>
+
+{% endif %}
+
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">
+<button class="secondary-btn">⬅ Back to Dashboard</button>
+</a>
+
+</div>
+
+</body>
+
+</html>

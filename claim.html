@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Claim Item</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="claim-page">
+
+<div class="container">
+
+<h1>📦 Claim Your Item</h1>
+
+<p>Enter your details to request this item.</p>
+
+<form method="POST">
+
+<input type="text" name="claimant_name" placeholder="👤 Your Name" required>
+
+<input type="email" name="claimant_email" placeholder="📧 Your Email" required>
+
+<button type="submit" class="claim-btn">📨 Submit Claim</button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">
+<button type="button" class="secondary-btn">⬅ Back to Dashboard</button>
+</a>
+
+</div>
+
+</body>
+
+</html>

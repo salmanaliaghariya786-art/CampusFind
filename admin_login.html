@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CampusFind Admin Login</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="admin-login-page">
+
+<div class="container admin-login-container">
+
+<h1>🛡️ Admin Login</h1>
+
+<p>Only Administrator Can Access</p>
+
+<form action="/admin_login" method="POST">
+
+<input type="text" name="username" placeholder="👤 Admin Username" required>
+
+<input type="password" name="password" placeholder="🔒 Admin Password" required>
+
+<button type="submit" class="admin-login-btn">Login as Admin</button>
+
+</form>
+
+<br>
+
+<a href="/login">
+<button type="button" class="back-btn">⬅ Back to User Login</button>
+</a>
+
+</div>
+
+</body>
+
+</html>
