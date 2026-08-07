@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CampusFind Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="dashboard-page">
+
+<div class="container">
+
+<h1>🏫 CampusFind Dashboard</h1>
+
+<div class="welcome">
+<h2>Welcome to CampusFind 👋</h2>
+<p>College Lost & Found Management System</p>
+</div>
+
+<div class="stats">
+
+<div class="card">
+<h2>👥 Users</h2>
+<p>{{ total_users }}</p>
+</div>
+
+<div class="card">
+<h2>📦 Lost Items</h2>
+<p>{{ total_lost }}</p>
+</div>
+
+<div class="card">
+<h2>🎒 Found Items</h2>
+<p>{{ total_found }}</p>
+</div>
+
+<div class="card">
+<h2>📋 Claims</h2>
+<p>{{ total_claims }}</p>
+</div>
+
+</div>
+
+<div class="action-grid">
+
+<a href="/report_lost">
+<button class="lost-btn">📦 Report Lost Item</button>
+</a>
+
+<a href="/report_found">
+<button class="found-btn">🎒 Report Found Item</button>
+</a>
+
+<a href="/search">
+<button class="search-btn">🔍 Search Lost Items</button>
+</a>
+
+<a href="/lost_items">
+<button class="view-lost-btn">📋 View Lost Items</button>
+</a>
+
+<a href="/found_items">
+<button class="view-found-btn">🖼️ View Found Items</button>
+</a>
+
+<a href="/admin_login">
+    <button class="admin-btn">🛡️ Admin Login</button>
+
+</a>
+<a href="/logout">
+    <button class="logout-btn">🚪 Logout</button>
+</a>
+</div>
+
+</div>
+
+</body>
+
+</html>

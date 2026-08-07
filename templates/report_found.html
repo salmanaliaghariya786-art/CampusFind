@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Report Found Item</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="found-page">
+
+<div class="container login-container">
+
+<h1>📦 Report Found Item</h1>
+
+<p>Help someone by reporting a found item.</p>
+
+<form action="/report_found" method="POST" enctype="multipart/form-data">
+
+<input type="text" name="item_name" placeholder="🎒 Item Name" required>
+
+<input type="text" name="category" placeholder="🏷️ Category" required>
+
+<input type="text" name="description" placeholder="📝 Description" required>
+
+<input type="text" name="location" placeholder="📍 Found Location" required>
+
+<input type="date" name="found_date" required>
+
+<input type="file" name="image" required>
+
+<button type="submit" class="found-btn">📤 Submit Report</button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">
+<button type="button" class="secondary-btn">⬅ Back to Dashboard</button>
+</a>
+
+</div>
+
+</body>
+
+</html>

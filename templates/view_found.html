@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>View Found Items</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="view-found-page">
+
+<div class="container">
+
+<h1>🖼️ Found Items</h1>
+
+<p>View all found items reported by users</p>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Item</th>
+<th>Category</th>
+<th>Description</th>
+<th>Location</th>
+<th>Date</th>
+
+</tr>
+
+{% for item in items %}
+
+<tr>
+
+<td>{{ item[0] }}</td>
+<td>{{ item[1] }}</td>
+<td>{{ item[2] }}</td>
+<td>{{ item[3] }}</td>
+<td>{{ item[4] }}</td>
+<td>{{ item[5] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">
+<button class="secondary-btn">⬅ Back to Dashboard</button>
+</a>
+
+</div>
+
+</body>
+
+</html>

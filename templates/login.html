@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CampusFind Login</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="login-page">
+
+<div class="container login-container">
+
+<h1>CampusFind</h1>
+
+<p>Login to your account</p>
+
+<form action="/login" method="POST">
+
+<input type="email" name="email" placeholder="📧 Enter Email" required>
+
+<input type="password" name="password" placeholder="🔒 Enter Password" required>
+
+<button type="submit">Login</button>
+
+</form>
+
+<br>
+
+<p>Don't have an account?</p>
+
+<a href="/signup">
+    <button type="button" class="secondary-btn">
+        Create Account
+    </button>
+</a>
+
+
+</div>
+
+</body>
+
+</html>
